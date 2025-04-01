@@ -39,3 +39,14 @@ Una vegada que el servidor està executat, es pot accedir a Swagger a través de
 ```
 http://localhost:3143/api-docs
 ```
+
+
+
+
+
+
+## Minim
+
+
+La función que corresponde a pagination en service no esta hecha por falta de tiempo, pero su implementación 
+seguiria la lógica que usa la de paginar users

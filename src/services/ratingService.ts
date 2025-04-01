@@ -18,54 +18,6 @@ export const createRatingScore = async (userRated: string, userRater: string, sc
 
 
     export const getPaginatedRating= async (userId: number,page:number) => {    }
-/*
-export const getPaginatedRating = async (page: number = 1, limit: number = 10): Promise<{
-    users: IUser[];
-  totalUsers: number;
-  totalPages: number;
-  currentPage: number;
-}> => {
-  try {
-    const skip = (page - 1) * limit;
-    
-    const query = {};
-    
-    console.log("Consulta MongoDB:", JSON.stringify(query));
-    
-    if (mongoose.connection.readyState !== 1) {
-      throw new Error("La conexión a MongoDB no está disponible");
-    }
-    
-    const db = mongoose.connection.db;
-    if (!db) {
-      throw new Error("La base de datos no está disponible");
-    }
-    
-    const collection = db.collection('users');
-    
-    const users = await collection.find(query)
-      .skip(skip)
-      .limit(limit)
-      .project({ password: 0 }) // Excluir la contraseña
-      .toArray();
-    
-    const totalUsers = await collection.countDocuments(query);
-    
-    const totalPages = Math.ceil(totalUsers / limit);
-    
-    console.log(`Encontrados ${users.length} usuarios de un total de ${totalUsers}`);
-    
-    return {
-      users: users as unknown as IUser[],
-      totalUsers,
-      totalPages,
-      currentPage: page
-    };
-  } catch (error) {
-    console.error('Error al obtener usuarios paginados:', error);
-    throw error;
-  }
-};*/
 
 
 
